@@ -1,0 +1,19 @@
+[project]
+name = "state-space-arb"
+version = "0.1.0"
+description = "Kalman-filter statistical arbitrage engine (backtest + paper trading)"
+requires-python = ">=3.11"
+dependencies = ["numpy", "pandas", "statsmodels", "pyarrow", "yfinance"]
+
+[project.optional-dependencies]
+dev = ["pytest", "matplotlib"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["state_space_arb*"]
+
+[tool.pytest.ini_options]
+testpaths = ["state_space_arb/tests"]
